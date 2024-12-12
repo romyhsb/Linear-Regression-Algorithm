@@ -67,6 +67,7 @@ Dataset BatikLens terdiri dari 8 jenis batik tradisional Indonesia yang digunaka
 Model yang diimplementasikan dalam kode ini menggunakan pendekatan transfer learning dengan TensorFlow dan Keras, khususnya memanfaatkan arsitektur ResNet50 untuk tugas klasifikasi gambar, terutama dalam mengenali berbagai pola batik dari dataset yang tersedia. Model ini dimulai dengan mengimpor pustaka yang diperlukan dan memuat dataset batik dari Google Drive, kemudian membagi dataset menjadi set pelatihan dan validasi. ResNet50, yang diambil dengan bobot yang telah dilatih sebelumnya dari ImageNet, digunakan sebagai model dasar tanpa lapisan atas untuk memungkinkan penyesuaian pada lapisan output sesuai dengan jumlah kelas batik yang ada. Setelah menambahkan beberapa lapisan kustom seperti GlobalAveragePooling2D, Dense, dan Dropout, model dikompilasi menggunakan optimizer Adam dan fungsi loss categorical crossentropy. Selama pelatihan, model ini dilatih selama 10 epoch dan divalidasi terhadap dataset pengujian. Setelah proses pelatihan, model dapat digunakan untuk memprediksi gambar baru, dan evaluasi kinerjanya dilakukan dengan membuat confusion matrix.
 
 ![model resnet](https://github.com/user-attachments/assets/58e4859f-e52f-4551-a7ab-0e76f28addbb)
-sumber:[model resnet50 model architectuer](https://commons.wikimedia.org/wiki/File:ResNet50.png)
+sumber:[model resnet50 model architecture](https://commons.wikimedia.org/wiki/File:ResNet50.png)
+
 
 
