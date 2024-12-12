@@ -63,6 +63,19 @@ Dataset BatikLens terdiri dari 8 jenis batik tradisional Indonesia yang digunaka
 ![foto_batik](https://github.com/user-attachments/assets/c5018323-86ec-4590-b048-cd36cd083f2d)
 
 ## Model Deep Learning
+### CNN from Scratch
+![cnn](https://github.com/user-attachments/assets/7c9f9805-bde8-41ec-a425-949a3c3738b9)
+Untuk model Deep Learning yang pertama, kami mencoba membangun model Deep Learning dari awal, kami memanfaatkan model CNN atau Convolutional Neural Network. Model CNN yang kami bangun terdiri dari Convolutional layer, Pooling Layer, beberapa hidden layers, dan yang terakhir output layer. Kami membuat model CNN dari yang simple dengan filter (3, 3) sampai dengan model cnn yang menggunakan filter (7, 7).
+
+
+![model_summary_simple_cnn](https://github.com/user-attachments/assets/beaf357c-e1e0-4973-81e2-fb66e2809e70)
+
+
+
+
+
+
+
 ### Algoritma ResNet50
 Model yang diimplementasikan dalam kode ini menggunakan pendekatan transfer learning dengan TensorFlow dan Keras, khususnya memanfaatkan arsitektur ResNet50 untuk tugas klasifikasi gambar, terutama dalam mengenali berbagai pola batik dari dataset yang tersedia. Model ini dimulai dengan mengimpor pustaka yang diperlukan dan memuat dataset batik dari Google Drive, kemudian membagi dataset menjadi set pelatihan dan validasi. ResNet50, yang diambil dengan bobot yang telah dilatih sebelumnya dari ImageNet, digunakan sebagai model dasar tanpa lapisan atas untuk memungkinkan penyesuaian pada lapisan output sesuai dengan jumlah kelas batik yang ada. Setelah menambahkan beberapa lapisan kustom seperti GlobalAveragePooling2D, Dense, dan Dropout, model dikompilasi menggunakan optimizer Adam dan fungsi loss categorical crossentropy. Selama pelatihan, model ini dilatih selama 10 epoch dan divalidasi terhadap dataset pengujian. Setelah proses pelatihan, model dapat digunakan untuk memprediksi gambar baru, dan evaluasi kinerjanya dilakukan dengan membuat confusion matrix.
 
