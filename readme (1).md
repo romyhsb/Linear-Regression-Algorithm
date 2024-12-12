@@ -114,24 +114,49 @@ Dari proses modelling atau pembuatan model yang dilakukan, didapatkan hasil perb
     <tr>
       <td>Accuracy</td>
       <td>0.6156</td>
-      <td>0.9846</td>
+      <td>0.9998</td>
     </tr>
     <tr>
       <td>loss</td>
       <td>4.7679</td>
-      <td>0.1000</td>
+      <td>0.0119</td>
     </tr>
     <tr>
       <td>val accuracy</td>
       <td>0.4410</td>
-      <td>0.9130</td>
+      <td>0.9503</td>
     </tr>
     <tr>
       <td>val loss</td>
       <td>5.2817</td>
-      <td>0.4100</td>
+      <td>0.1336</td>
     </tr>
   </tbody>
 </table>
+
+
+kami juga menggunakan confusion matrix guna melihat kesalahan dan performa pada model, berikut hasil confusion matrix dari model yang kami gunakan:
+
+### confusion matrix CNN 
+![confusion matrix_cnn](https://github.com/user-attachments/assets/8aa4816f-c06a-41e1-9ed7-1f94e8cb54eb)
+
+
+
+### confusion matrix ResNet50
+
+![confusion matrix untuk resnet](https://github.com/user-attachments/assets/f0ae1d9f-ac33-4b0f-b50e-83a017b57205)
+
+
+Dari perbandingan hasil model yang digunakan, dengan tingkat akurasi dan kualitas model yang sangat jauh berbeda, maka kami memilih untuk menggunakan model transfer learning Resnet50.
+
+
+### Link Project Google Colab
+
+[Batik Classification](https://colab.research.google.com/drive/1kKXlR55oiDNd74e430Bpk3KRBSVOXA2J?usp=sharing)
+
+### Daftar Pustaka dan Referensi
+Berikut beberapa paper yang kami jadikan sebagai referensi dalam membangun proyek klasifikasi batik ini. Kami telah meringkas semua isi paper dan menyertakan link url dari paper yang digunakan.
+
+[sumber Referensi](https://docs.google.com/spreadsheets/d/1e-bderZlbDEQoaEPYR_jhdN8ZlTwu3w99RCkcTZ_5_Q/edit?usp=sharing)
 
 
