@@ -62,7 +62,7 @@ Dataset BatikLens terdiri dari 8 jenis batik tradisional Indonesia yang digunaka
 #### Contoh gambar batik
 ![foto_batik](https://github.com/user-attachments/assets/c5018323-86ec-4590-b048-cd36cd083f2d)
 
-## Model Deep Learning
+## Model 
 ### CNN from Scratch
 ![cnn](https://github.com/user-attachments/assets/7c9f9805-bde8-41ec-a425-949a3c3738b9)
 
@@ -75,7 +75,10 @@ Untuk model Deep Learning yang pertama, kami mencoba membangun model Deep Learni
 ![model_summary_simple_cnn](https://github.com/user-attachments/assets/beaf357c-e1e0-4973-81e2-fb66e2809e70)
 
 
-Namun setelah mencoba beberapa model CNN, dari model yang simple sampai dengan model CNN yang lebih dalam, Mungkin karena data batik yang digunakan juga lumayan sedikit untuk di training. Model kami mengalami overfitting (model overfitting tanpa augmentasi data) dan underfitting ketika kami menerapkan augmentasi pada data image.  Dengan pertimabangan ini kami memilih untuk menerapkan model transfer learning untuk membangun model klasifikasi batik.
+##### model CNN summary
+
+
+Namun setelah mencoba beberapa model CNN, dari model yang simple sampai dengan model CNN yang lebih dalam, model kami mengalami overfitting (model overfitting tanpa augmentasi data) dan underfitting ketika kami menerapkan augmentasi pada data image. Mungkin karena data batik yang digunakan juga lumayan sedikit untuk di training sehingga berakibat demikian. Dengan pertimbangan ini kami memilih untuk menerapkan model transfer learning untuk membangun model klasifikasi batik.
 
 
 
@@ -84,7 +87,51 @@ Namun setelah mencoba beberapa model CNN, dari model yang simple sampai dengan m
 Setelah mencoba membangun model dari awal, dan hasil akurasi yang didapat sangat kecil, kami menggunakan model transfer learning sebagai alternatif. Model transfer learning yang dipilih adalah ResNet50, model ini dimulai dengan mengimpor pustaka yang diperlukan dan memuat dataset batik dari Google Drive, kemudian membagi dataset menjadi set pelatihan dan validasi. ResNet50, yang diambil dengan bobot yang telah dilatih sebelumnya dari ImageNet, digunakan sebagai model dasar tanpa lapisan atas untuk memungkinkan penyesuaian pada lapisan output sesuai dengan jumlah kelas batik yang ada. Setelah menambahkan beberapa lapisan kustom seperti GlobalAveragePooling2D, Dense, dan Dropout, model dikompilasi menggunakan optimizer Adam dan fungsi loss categorical crossentropy. Selama pelatihan, model ini dilatih selama 10 epoch dan divalidasi terhadap dataset pengujian. Setelah proses pelatihan, model dapat digunakan untuk memprediksi gambar baru, dan evaluasi kinerjanya dilakukan dengan membuat confusion matrix.
 
 ![model resnet](https://github.com/user-attachments/assets/58e4859f-e52f-4551-a7ab-0e76f28addbb)
+
+
+
 sumber:[model resnet50 model architecture](https://commons.wikimedia.org/wiki/File:ResNet50.png)
 
+
+
+
+![resnet_summary](https://github.com/user-attachments/assets/6189c213-7101-4c14-bbbd-9555f24cab1b)
+
+
+##### model resnet50 summary
+
+### Model Result and Evaluation
+Dari proses modelling atau pembuatan model yang dilakukan, didapatkan hasil perbandingan model CNN dari scratch baik menggunakan data augmentasi ataupun tidak dan hasil model menggunakan transfer learning dengan ResNet50 sebagai berikut:
+<table>
+  <thead>
+    <tr>
+      <th>Metrics</th>
+      <th>Model CNN From Scratch</th>
+      <th>Model transfer learning (ResNet50)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Accuracy</td>
+      <td>0.6156</td>
+      <td>0.9846</td>
+    </tr>
+    <tr>
+      <td>loss</td>
+      <td>4.7679</td>
+      <td>0.1000</td>
+    </tr>
+    <tr>
+      <td>val accuracy</td>
+      <td>0.4410</td>
+      <td>0.9130</td>
+    </tr>
+    <tr>
+      <td>val loss</td>
+      <td>5.2817</td>
+      <td>0.4100</td>
+    </tr>
+  </tbody>
+</table>
 
 
