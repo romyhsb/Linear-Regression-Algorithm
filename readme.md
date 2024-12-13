@@ -60,7 +60,8 @@ The BatikLens dataset comprises 8 types of traditional Indonesian batik used to 
 </table>
 
 #### Example of Batik Images  
-![foto_batik](https://github.com/user-attachments/assets/c5018323-86ec-4590-b048-cd36cd083f2d)
+![foto_batik](![batik_foto](https://github.com/user-attachments/assets/b04aa0f9-b267-4ae0-ac54-4a880568dcb5)
+
 
 ## Model 
 ### CNN from Scratch
